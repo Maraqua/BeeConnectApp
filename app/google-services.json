@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "518307519488",
+    "firebase_url": "https://beeconnectapp-e2362.firebaseio.com",
+    "project_id": "beeconnectapp-e2362",
+    "storage_bucket": "beeconnectapp-e2362.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518307519488:android:5c12d10821197851dd4ce5",
+        "android_client_info": {
+          "package_name": "com.marty.beeconnect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518307519488-369l7jup24c2ph59uiulejqsdjk7siir.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.marty.beeconnect",
+            "certificate_hash": "782691125f2e65c4887d574ce3abfe05bc8cb61f"
+          }
+        },
+        {
+          "client_id": "518307519488-qj57at9nt7260gsf03ms7ihh2oum9hip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChwg3AGlEwHTKQXuTIdS21fAp1rl6-viM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518307519488-qj57at9nt7260gsf03ms7ihh2oum9hip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
