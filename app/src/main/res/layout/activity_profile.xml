@@ -18,27 +18,27 @@
             app:expandedTitleGravity="bottom|right|start|center"
             app:expandedTitleMarginEnd="0dp"
             app:expandedTitleMarginStart="16dp"
+            android:elevation="10dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
-            app:expandedTitleTextAppearance="@style/profileExpandedAppBar"
-            app:collapsedTitleTextAppearance="@style/CollapsedAppBar"
+
 
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="210dp"
                 app:layout_collapseMode="parallax">
 
 
-                <ImageView
-                    android:id="@+id/profile_cover"
-                    android:layout_width="match_parent"
-                    android:layout_height="400dp"
-                    android:minHeight="350dp"
-                    android:paddingBottom="75dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/default_image_placeholder"
-                    android:transitionName="shared"
-                    app:layout_collapseMode="parallax" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/profile_cover"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="400dp"-->
+<!--                    android:minHeight="350dp"-->
+<!--                    android:paddingBottom="75dp"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@drawable/default_image_placeholder"-->
+<!--                    android:transitionName="shared"-->
+<!--                    app:layout_collapseMode="parallax" />-->
 
 
                 <de.hdodenhof.circleimageview.CircleImageView
@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?android:attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:title="M"
+                app:title="Martha"
                 app:titleMarginStart="0dp"
                 app:titleTextColor="#000"
                 app:subtitleTextAppearance="@dimen/user_header_height"/>

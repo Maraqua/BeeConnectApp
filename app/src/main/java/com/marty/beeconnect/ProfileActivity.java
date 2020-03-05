@@ -3,6 +3,7 @@ package com.marty.beeconnect;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,8 +22,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class ProfileActivity extends AppCompatActivity {
-@BindView(R.id.profile_cover)
-    ImageView profileCover;
+//@BindView(R.id.profile_cover)
+//    ImageView profileCover;
 @BindView(R.id.profile_image)
     CircleImageView profileImage;
 @BindView(R.id.profile_option_btn)
@@ -36,6 +37,9 @@ public class ProfileActivity extends AppCompatActivity {
 ProfileViewPageAdapter profileViewPageAdapter;
 String uid ="0";
 int current_state =0; //0 load current user profile, 1 show their profile
+    String profileUrl="",coverUrl="";
+    ProgressDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,10 @@ int current_state =0; //0 load current user profile, 1 show their profile
         setContentView(R.layout.activity_profile);
 
         uid = getIntent ().getStringExtra ( "uid" );
+        progressDialog = new ProgressDialog ( this );
+        progressDialog.setCancelable ( false );
+        progressDialog.setMessage ("Uploading...");
+       // progressDialog.show ();
 
         ButterKnife.bind(this);
         profileViewPageAdapter = new ProfileViewPageAdapter ( getSupportFragmentManager (),1 );

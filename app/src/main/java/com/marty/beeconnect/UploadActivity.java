@@ -17,8 +17,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public
 class UploadActivity extends AppCompatActivity {
-    @BindView(R.id.privacy_spinner)
-    Spinner privacySpinner;
+//    @BindView(R.id.privacy_spinner)
+//    Spinner privacySpinner;
     @BindView(R.id.postBtnTxt)
     TextView postBtnTxt;
     @BindView(R.id.toolbar)

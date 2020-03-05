@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="colorPrimary">#FAFAFA</color>
     <color name="colorPrimaryDark">#000</color>
-    <color name="colorAccent">#333</color>
+    <color name="colorAccent">#B06AB3</color>
     <color name="white">#ffffff</color>
+    <color name="colorBackground">#000</color>
+    <color name="colorTextHint">#ed213a</color>
     <color name="hint_color">#70625b</color>
-
+    <color name="button_gradient">@color/gradient1</color>
+    <color name="mtrl_textinput_default_box_stroke_color"  tools:override="true">#B06AB3</color>
 </resources>
