@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
@@ -23,6 +24,7 @@ import com.marty.beeconnect.fragment.RoomFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
     @BindView(R.id.toolbar_title)
@@ -35,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton fab;
     @BindView(R.id.bottom_navigation)
     BottomNavigationView bottomNavigation;
+    @BindView(R.id.search)
+    ImageView search;
 IdeasFragment ideasFragment;
 NotificationFragment notificationFragment;
 RoomFragment roomFragment ;
@@ -97,4 +101,9 @@ RoomFragment roomFragment ;
         fragmentTransaction.replace(R.id.framelayout, fragment);
         fragmentTransaction.commit();
     }
+    @OnClick(R.id.search)
+    public void onViewClicked() {
+        startActivity(new Intent(MainActivity.this,SearchActivity.class));
+    }
+
 }

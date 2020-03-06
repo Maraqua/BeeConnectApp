@@ -20,6 +20,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
     }
 }
 
@@ -30,7 +34,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:21.4.0'
     // Needed for google auth
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
-
+    //picasso library
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     //Networking Library :RETROFIT
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
@@ -67,6 +72,12 @@ dependencies {
     implementation 'com.android.support:recyclerview-v7:29.0.0'
     // circular imageview
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //for posts
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'com.github.esafirm.android-image-picker:imagepicker:1.12.0'
+    implementation 'com.github.esafirm.android-image-picker:rximagepicker:1.12.0'
+    implementation 'com.github.bumptech.glide:glide:4.5.0'
+    implementation 'id.zelory:compressor:2.1.0'
 
 
 }

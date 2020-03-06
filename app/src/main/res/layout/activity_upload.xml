@@ -38,7 +38,7 @@
                 android:layout_marginEnd="27dp"
                 android:layout_marginTop="10dp"
                 android:text="Post"
-                android:textColor="#000"
+                android:textColor="@drawable/button_radius"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -60,8 +60,8 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/dialogAvatar"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="134dp"
+                android:layout_height="132dp"
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
@@ -69,23 +69,23 @@
 
             <EditText
                 android:id="@+id/status_edit"
-                android:layout_width="match_parent"
+                android:layout_width="285dp"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/dialogAvatar"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginLeft="22dp"
                 android:layout_marginEnd="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_toEndOf="@+id/dialogAvatar"
                 android:layout_toRightOf="@+id/dialogAvatar"
+                android:backgroundTint="@color/colorAccent"
                 android:hint="For good ideas and true innovation, you need human interaction, conflict, argument, debate.\n ~ Margaret Heffernan"
                 android:maxLines="5"
-                android:textColorHint="@color/colorAccent"
                 android:padding="20dp"
                 android:textColor="@color/colorAccent"
-                android:textSize="15sp"
+                android:textColorHint="@color/colorAccent"
                 android:textCursorDrawable="@color/colorAccent"
-                android:backgroundTint="@color/colorAccent">
+                android:textSize="15sp">
 
                 <requestFocus />
             </EditText>

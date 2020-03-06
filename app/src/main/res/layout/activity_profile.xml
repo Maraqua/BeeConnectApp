@@ -22,35 +22,35 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
 
-
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="210dp"
+                android:layout_height="wrap_content"
                 app:layout_collapseMode="parallax">
 
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/profile_cover"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="400dp"-->
-<!--                    android:minHeight="350dp"-->
-<!--                    android:paddingBottom="75dp"-->
-<!--                    android:scaleType="fitXY"-->
-<!--                    android:src="@drawable/default_image_placeholder"-->
-<!--                    android:transitionName="shared"-->
-<!--                    app:layout_collapseMode="parallax" />-->
+                <ImageView
+                    android:id="@+id/profile_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="303dp"
+                    android:minHeight="350dp"
+                    android:paddingBottom="75dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/default_image_placeholder"
+                    android:transitionName="shared"
+                    app:layout_collapseMode="parallax" />
 
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/profile_image"
-                    android:layout_width="175dp"
-                    android:layout_height="175dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_gravity="bottom|center"
                     android:elevation="2dp"
                     android:paddingBottom="10dp"
                     android:src="@drawable/avatar"
                     android:transitionName="shared"
                     app:civ_border_color="#05000000"
+
                     app:civ_border_width="1dp"
                     app:layout_collapseMode="parallax" />
 
@@ -61,10 +61,12 @@
                     android:layout_gravity="bottom|end"
                     android:layout_marginEnd="10dp"
                     android:layout_marginBottom="20dp"
-                    android:background="@drawable/background_button_round"
+                    android:background="@drawable/button_radius"
+                    android:textColor="#fafafa"
                     android:elevation="4dp"
                     android:gravity="center"
                     android:paddingStart="5dp"
+                    android:text="@string/edit"
                     android:paddingEnd="5dp"
                     android:textAllCaps="false"
                     app:layout_collapseMode="parallax" />
@@ -77,11 +79,12 @@
                 style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 android:layout_width="match_parent"
                 android:layout_height="?android:attr/actionBarSize"
+                android:background="#00FAFAFA"
                 app:layout_collapseMode="pin"
-                app:title="Martha"
+
+                app:title=""
                 app:titleMarginStart="0dp"
-                app:titleTextColor="#000"
-                app:subtitleTextAppearance="@dimen/user_header_height"/>
+                app:titleTextAppearance="@color/colorAccent" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient extends Activity {
 
-    public static  final String BASE_URL ="http://192.168.88.42/1beeconnect/public/app/";
+    public static  final String BASE_URL ="http://172.23.1.104/beeconnect/public/app/";
 
     private  static Retrofit retrofit = null;
     public  static  Retrofit getApiClient(){

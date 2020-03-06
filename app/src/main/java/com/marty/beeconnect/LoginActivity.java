@@ -38,11 +38,14 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import java.lang.Integer;
+import java.util.Map;
 
 import com.marty.beeconnect.Helpers.InputValidation;
+import com.marty.beeconnect.model.User;
 import com.marty.beeconnect.rest.ApiClient;
 import com.marty.beeconnect.rest.services.UserInterface;
 
+import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -158,6 +161,18 @@ private final TextWatcher textWatcher = new TextWatcher () {
             @Override
             public
             Call<Integer> signin ( UserInfo userInfo ) {
+                return null;
+            }
+
+            @Override
+            public
+            Call<User> loadownProfile ( Map<String, String> params ) {
+                return null;
+            }
+
+            @Override
+            public
+            Call<Integer> uploadStatus ( MultipartBody requestBody ) {
                 return null;
             }
         };

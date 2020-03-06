@@ -11,12 +11,12 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".UploadActivity"></activity>
+        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".UploadActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".rest.ApiClient" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity"
-            >
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
