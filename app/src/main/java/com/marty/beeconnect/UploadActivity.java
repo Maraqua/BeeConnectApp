@@ -38,8 +38,7 @@ import retrofit2.Response;
 
 public
 class UploadActivity extends AppCompatActivity {
-//    @BindView(R.id.privacy_spinner)
-//    Spinner privacySpinner;
+
     @BindView(R.id.postBtnTxt)
     TextView postBtnTxt;
     @BindView(R.id.toolbar)
@@ -81,6 +80,7 @@ class UploadActivity extends AppCompatActivity {
             @Override
             public
             void onClick ( View v ) {
+                //open gallery
                 ImagePicker.create ( UploadActivity.this )
                         .folderMode ( true )
                         .single ().start ();
@@ -110,13 +110,13 @@ class UploadActivity extends AppCompatActivity {
 
             if (isImageSelected) {
                 builder.addFormDataPart("isImageSelected", "1");
-                builder.addFormDataPart ( "file", compressedImageFile.getName (), RequestBody.create ( MediaType.parse (  "multipart/form-data"),compressedImageFile ) );
+                builder.addFormDataPart ( "file", compressedImageFile.getName (), RequestBody.create ( MediaType.parse ( "multipart/form-data"),compressedImageFile ) );
             }else{
                 builder.addFormDataPart ( "isImageSelected","0" );
 
             }MultipartBody multipartBody = builder.build ();
             UserInterface userInterface = ApiClient.getApiClient ().create ( UserInterface.class );
-            Call<Integer>call = userInterface.uploadStatus ( multipartBody );
+            Call<Integer>call = userInterface.uploadIdea ( multipartBody );
             call.enqueue ( new Callback<Integer> () {
                 @Override
                 public
@@ -141,6 +141,9 @@ class UploadActivity extends AppCompatActivity {
                 }
             } );
 
+
+        }else{
+            Toast.makeText(UploadActivity.this, "Please write your post first", Toast.LENGTH_SHORT).show();
 
         }
     }

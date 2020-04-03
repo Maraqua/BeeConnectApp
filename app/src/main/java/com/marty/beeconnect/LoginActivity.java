@@ -38,9 +38,12 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.iid.InstanceIdResult;
 import java.lang.Integer;
+import java.util.List;
 import java.util.Map;
 
 import com.marty.beeconnect.Helpers.InputValidation;
+import com.marty.beeconnect.adapter.IdeasAdapter;
+import com.marty.beeconnect.model.IdeasModel;
 import com.marty.beeconnect.model.User;
 import com.marty.beeconnect.rest.ApiClient;
 import com.marty.beeconnect.rest.services.UserInterface;
@@ -172,9 +175,36 @@ private final TextWatcher textWatcher = new TextWatcher () {
 
             @Override
             public
-            Call<Integer> uploadStatus ( MultipartBody requestBody ) {
+            Call<Integer> uploadIdea ( MultipartBody requestBody ) {
                 return null;
             }
+
+            @Override
+            public
+            Call<List<User>> searchbees ( Map<String, String> params ) {
+                return null;
+            }
+
+            @Override
+            public
+            Call<List<IdeasModel>> getMyProfileTimeline ( Map<String, String> params ) {
+                return null;
+            }
+
+
+            @Override
+            public
+            Call<List<IdeasModel>> getAllPosts ( Map<String, String> params ) {
+                return null;
+            }
+
+            @Override
+            public
+            Call<Integer> voteDownvote ( IdeasAdapter.AddVote requestBody ) {
+                return null;
+            }
+
+
         };
         user = new UserReg ();
 
@@ -342,4 +372,4 @@ private final TextWatcher textWatcher = new TextWatcher () {
 
 }
 //todo:change progress bar color for signing in with google
-//todo:make a cursor color for every cursor
+//todo:make a cursor color for every cursor blink

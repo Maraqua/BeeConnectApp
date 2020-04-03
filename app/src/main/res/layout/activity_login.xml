@@ -28,11 +28,10 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fontFamily="@font/black_ops_one"
             android:gravity="center"
             android:text="BeeConnect"
             android:textColor="#B06AB3"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:fontFamily="@font/black_ops_one">
 

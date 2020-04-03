@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".ViewPostDetails"></activity>
+        <activity android:name=".SearchActivity" />
         <activity android:name=".UploadActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".rest.ApiClient" />

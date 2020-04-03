@@ -4,21 +4,25 @@
     android:layout_height="match_parent"
     android:background="#fff">
 
+        <androidx.recyclerview.widget.RecyclerView
 
-    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ideas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ideasProgressBar"
+            android:background="#dcdee3"/>
 
-        android:id="@+id/ideas"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/ideasProgressBar"/>
+        <ProgressBar
+            android:id="@+id/ideasProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom|center"
+            android:visibility="gone"
 
-    <ProgressBar
-        android:id="@+id/ideasProgressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom|center"
-      />
+            />
+
+
 
 </RelativeLayout>

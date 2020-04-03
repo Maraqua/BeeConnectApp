@@ -53,16 +53,7 @@ public class ProfileActivity extends AppCompatActivity {
     ViewPager ViewPagerProfile;
 ProfileViewPageAdapter profileViewPageAdapter;
 String uid ="0";
-int current_state =0; //0 load current user profile, 1 show their profile
-    /*
-
- 0 = profile is still loading--using 0
- 1=  two people are friends ( unfriend )
- 2 = this person has sent friend request to another friend ( cancel sent requeset )
- 3 = this person has received friend request from another friend  (  reject or accept request )
- 4 = people are unkown ( you can send requeset )
- 5 = own profile --using1
-  */
+    int current_state =0;
     String profileUrl="",coverUrl="";
     ProgressDialog progressDialog;
 
@@ -82,7 +73,6 @@ int current_state =0; //0 load current user profile, 1 show their profile
         progressDialog.show ();
 
         ButterKnife.bind(this);
-        profileViewPageAdapter = new ProfileViewPageAdapter ( getSupportFragmentManager (),1 );
         setSupportActionBar(toolbar);
 
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_black_24dp);
@@ -94,16 +84,21 @@ int current_state =0; //0 load current user profile, 1 show their profile
 
             }
         });
-        ViewPagerProfile.setAdapter ( profileViewPageAdapter );
+
         if(FirebaseAuth.getInstance ().getCurrentUser ().getUid ().equalsIgnoreCase ( uid )){
             current_state = 1;
 
             loadProfile();
 
         }else{
-            current_state=0;
+            current_state=2;
 
         }
+    }
+    private void showUserData(User user) {
+        profileViewPageAdapter = new ProfileViewPageAdapter ( getSupportFragmentManager (),1,user.getUid (),user.getState ());
+        ViewPagerProfile.setAdapter ( profileViewPageAdapter );
+
     }
     private void loadProfile() {
         UserInterface userInterface = ApiClient.getApiClient().create(UserInterface.class);
@@ -114,8 +109,9 @@ int current_state =0; //0 load current user profile, 1 show their profile
             @Override
             public
             void onResponse ( Call<User> call, Response<User> response ) {
-                progressDialog.dismiss ();
                 if (response.body () != null) {
+                    progressDialog.dismiss ();
+                    showUserData ( response.body () );
                     profileUrl = response.body ().getProfileUrl ();
                     //coverUrl = response.body ().getCoverUrl ();
                     collapsingToolbar.setTitle ( response.body ().getName () );

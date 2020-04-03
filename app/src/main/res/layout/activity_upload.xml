@@ -118,7 +118,7 @@
                 android:elevation="8dp"
                 android:background="@drawable/button_radius"
                 android:fontFamily="monospace"
-                android:text="Share Idea"
+                android:text="Add Image"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                 android:textColor="#FFFFFF" />
