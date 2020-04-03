@@ -33,6 +33,9 @@ public interface  UserInterface {
     Call<List<IdeasModel>> getMyProfileTimeline(@QueryMap Map<String, String> params);
 
     @GET("getallposts")
+    Call<List<IdeasModel>> getHotPosts( @QueryMap Map<String, String> params);
+
+    @GET("getallposts")
     Call<List<IdeasModel>> getAllPosts( @QueryMap Map<String, String> params);
 
     @POST("votedownvote")

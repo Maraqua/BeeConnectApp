@@ -191,6 +191,12 @@ private final TextWatcher textWatcher = new TextWatcher () {
                 return null;
             }
 
+            @Override
+            public
+            Call<List<IdeasModel>> getHotPosts ( Map<String, String> params ) {
+                return null;
+            }
+
 
             @Override
             public
